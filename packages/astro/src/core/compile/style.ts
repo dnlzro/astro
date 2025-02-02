@@ -5,7 +5,7 @@ import { AstroErrorData, CSSError, positionAt } from '../errors/index.js';
 import { normalizePath } from '../viteUtils.js';
 import type { CompileCssResult } from './types.js';
 
-export type PartialCompileCssResult = Pick<CompileCssResult, 'isGlobal' | 'dependencies'>;
+export type PartialCompileCssResult = Pick<CompileCssResult, 'isGlobal' | 'isScoped' | 'dependencies'>;
 
 export function createStylePreprocessor({
 	filename,
@@ -29,6 +29,7 @@ export function createStylePreprocessor({
 
 			cssPartialCompileResults[index] = {
 				isGlobal: !!attrs['is:global'],
+				isScoped: !!attrs['is:scoped'],
 				dependencies: result.deps ? [...result.deps].map((dep) => normalizePath(dep)) : [],
 			};
 

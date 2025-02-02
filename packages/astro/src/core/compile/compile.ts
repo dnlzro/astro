@@ -51,6 +51,7 @@ export async function compile({
 			// but it somehow allows working around caching issues in content collections for some tests
 			astroGlobalArgs: JSON.stringify(astroConfig.site),
 			scopedStyleStrategy: astroConfig.scopedStyleStrategy,
+			globalStyles: astroConfig.globalStyles,
 			resultScopedSlot: true,
 			transitionsAnimationURL: 'astro/components/viewtransitions.css',
 			annotateSourceFile:

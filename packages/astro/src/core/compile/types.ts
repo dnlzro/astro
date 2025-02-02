@@ -5,6 +5,10 @@ export interface CompileCssResult {
 	 */
 	isGlobal: boolean;
 	/**
+	 * Whether this is `<style is:scoped>`
+	 */
+	isScoped: boolean;
+	/**
 	 * The dependencies of the transformed CSS (Normalized/forward-slash-only absolute paths)
 	 */
 	dependencies: string[];

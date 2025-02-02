@@ -509,6 +509,21 @@ export interface ViteUserConfig extends OriginalViteUserConfig {
 
 	/**
 	 * @docs
+	 * @name globalStyles
+	 * @type {boolean}
+	 * @default `false`
+	 * @version TODO
+	 * @description
+	 *
+	 * Specify default scoping behaviour for styles within Astro components.
+	 * Choose from:
+	 *   - `true` 		- Styles will not be scoped by default (requiring an `is:scoped` attribute on the `<style>` tag to opt-in).
+	 *   - `false` 		- Styles will be scoped by default.
+	 */
+	globalStyles?: boolean;
+	
+	/**
+	 * @docs
 	 * @name security
 	 * @type {Record<"checkOrigin", boolean> | undefined}
 	 * @default `{checkOrigin: true}`

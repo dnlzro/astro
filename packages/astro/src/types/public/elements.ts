@@ -35,6 +35,7 @@ export interface AstroDefineVarsAttribute {
 
 export interface AstroStyleAttributes {
 	'is:global'?: boolean;
+	'is:scoped'?: boolean;
 	'is:inline'?: boolean;
 }
 

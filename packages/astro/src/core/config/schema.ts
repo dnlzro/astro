@@ -142,6 +142,7 @@ export const AstroConfigSchema = z.object({
 		.union([z.literal('where'), z.literal('class'), z.literal('attribute')])
 		.optional()
 		.default('attribute'),
+	globalStyles: z.boolean().optional().default(false),
 	adapter: z.object({ name: z.string(), hooks: z.object({}).passthrough().default({}) }).optional(),
 	integrations: z.preprocess(
 		// preprocess
